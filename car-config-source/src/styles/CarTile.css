@@ -1,0 +1,34 @@
+.car-tile {
+    transition: 500ms;
+    margin: 20px;
+    background-color: #202021;
+    border: 2px solid #383939;
+    border-radius: 25px;
+    height: 400px;
+    width: 300px;
+    padding: 10px;
+    justify-content: center;
+    color: white;
+    box-sizing: content-box;
+}
+
+.car-tile > header {
+    font-size: 58px;
+    font-weight: 500;
+    height: fit-content;
+}
+
+.car-tile > footer {
+    font-size: 50px;
+}
+
+.car-tile:hover {
+    transition: 500ms;
+    background-color: #383939;
+    border-color: #969696;
+    box-shadow: 10px 10px 10px black;
+}
+
+.car-tile-image {
+    width: 280px;
+}
