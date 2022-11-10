@@ -18,8 +18,39 @@
     height: fit-content;
 }
 
+.car-tile > section {
+    height: 200px;
+    display: flex;
+}
+
+.car-tile > section > img {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+}
+
 .car-tile > footer {
-    font-size: 50px;
+    display: flex;
+    height: 60px;
+    justify-content: right;
+}
+
+.car-tile > footer > span {
+    font-size: 24px;
+    font-weight: 700;
+    vertical-align: middle;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 15px;
+}
+
+.car-tile > nav {
+    display: flex;
+    font-size: 22px;
+    justify-content: space-evenly;
 }
 
 .car-tile:hover {
@@ -32,3 +63,4 @@
 .car-tile-image {
     width: 280px;
 }
+

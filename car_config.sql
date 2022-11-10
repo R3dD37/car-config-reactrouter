@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 04 Lis 2022, 09:38
+-- Czas generowania: 07 Lis 2022, 15:11
 -- Wersja serwera: 10.4.24-MariaDB
 -- Wersja PHP: 7.4.29
 
@@ -40,7 +40,8 @@ CREATE TABLE `cars` (
 
 INSERT INTO `cars` (`id`, `model_name`, `base_price`, `img_src`) VALUES
 (1, 'Golf', '65000.00', 'https://cutt.ly/7BHYePU'),
-(2, 'ID.5', '228218.00', 'https://cutt.ly/yBHYdxZ');
+(2, 'ID.5', '228218.00', 'https://cutt.ly/yBHYdxZ'),
+(3, 'ID.3', '191490.00', NULL);
 
 -- --------------------------------------------------------
 
@@ -81,7 +82,8 @@ CREATE TABLE `colors_cars` (
 
 INSERT INTO `colors_cars` (`id`, `id_car`, `id_color`) VALUES
 (1, 1, 1),
-(2, 1, 2);
+(2, 1, 2),
+(3, 3, 2);
 
 -- --------------------------------------------------------
 
@@ -133,7 +135,8 @@ CREATE TABLE `drive` (
 
 INSERT INTO `drive` (`id`, `emission`, `fuel_consumption`, `fuel_range`, `fuel_comp_units`, `base_price`, `id_engine`, `id_gearbox`, `id_car`) VALUES
 (1, 127, '5.58', 1000, 'l/100km', '111090.00', 1, 1, 1),
-(2, 110, '4.21', 1200, 'l/100km', '118190.00', 2, 1, 1);
+(2, 110, '4.21', 1200, 'l/100km', '118190.00', 2, 1, 1),
+(3, 0, '15.30', 426, 'kWh/100km', '191490.00', 4, 2, 3);
 
 -- --------------------------------------------------------
 
@@ -182,7 +185,8 @@ CREATE TABLE `engine` (
 INSERT INTO `engine` (`id`, `fuelType`, `capacity`, `shortName`, `power_kW`, `power_KM`, `torque_max`, `torque_range_low`, `torque_range_high`, `hybrid_power`) VALUES
 (1, 'petrol', 1498, '1.5 TSI EVO', 110, 150, 250, 1500, 3500, NULL),
 (2, 'diesel', 1968, '2.0 TDI', 85, 116, 300, 1600, 2500, NULL),
-(3, 'diesel', 1968, '2.0 TDI', 110, 150, 340, 1600, 3000, NULL);
+(3, 'diesel', 1968, '2.0 TDI', 110, 150, 340, 1600, 3000, NULL),
+(4, 'electric', 0, 'Electric', 150, 204, 310, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -201,7 +205,8 @@ CREATE TABLE `gearbox` (
 --
 
 INSERT INTO `gearbox` (`id`, `speedNumber`, `shortName`) VALUES
-(1, 6, 'manual');
+(1, 6, 'manual'),
+(2, 1, 'Automatic');
 
 -- --------------------------------------------------------
 
@@ -302,7 +307,7 @@ ALTER TABLE `rims`
 -- AUTO_INCREMENT dla tabeli `cars`
 --
 ALTER TABLE `cars`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT dla tabeli `colors`
@@ -314,25 +319,25 @@ ALTER TABLE `colors`
 -- AUTO_INCREMENT dla tabeli `colors_cars`
 --
 ALTER TABLE `colors_cars`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT dla tabeli `drive`
 --
 ALTER TABLE `drive`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT dla tabeli `engine`
 --
 ALTER TABLE `engine`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT dla tabeli `gearbox`
 --
 ALTER TABLE `gearbox`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT dla tabeli `rims`

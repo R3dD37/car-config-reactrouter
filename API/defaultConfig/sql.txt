@@ -1,0 +1,13 @@
+alter view default_car_config as
+select d.id_car, d.id id_drive, MIN(d.base_price) base_price, MIN(cc.id_color) id_color from drive d
+left join colors_cars cc
+on d.id_car = cc.id_car
+group by d.id_car, d.id;
+
+SELECT * from default_car_config;
+
+alter view default_car as
+SELECT dcc.id_car, MIN(dcc.base_price) + (SELECT price FROM colors WHERE id = dcc.id_color) base_price from default_car_config dcc
+group by dcc.id_car;
+
+select * from default_car;

@@ -1,0 +1,9 @@
+.colors-view {
+    width: 96%;
+    transition: 500ms;
+    border: 2px solid #383939;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 10px;
+    background-color: #272727;
+}
