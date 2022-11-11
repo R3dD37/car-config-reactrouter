@@ -1,0 +1,34 @@
+main > header {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 25px;
+}
+
+main > section {
+    display: flex;
+}
+
+.gallery {
+    width: 50%;
+}
+
+.options {
+    border: 4px solid #383939;
+    border-radius: 25px;
+    background-color: #202021;
+    width: 50%;
+    height: 100%;
+}
+
+.options > header {
+    margin: 15px;
+    display: flex;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.options > footer {
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,58 @@
+.engine-tile {
+    width: 96%;
+    transition: 500ms;
+    border: 2px solid #383939;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 10px;
+    background-color: #272727;
+}
+
+.engine-tile > header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    text-align: left;
+    margin-left: 10px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.engine-tile > footer {
+    display: flex;
+    justify-content: right;
+}
+
+.engine-tile > footer > span {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 12px;
+}
+
+.engine-tile:hover {
+    border-color: #969696;
+    cursor: pointer;
+}
+
+.engine-tile:hover hr {
+    border-color: #969696;
+    background-color: #969696;
+}
+
+section table {
+    width: 100%;
+    border-spacing: 10px;
+}
+
+hr {
+    background-color: #383939;
+    border: 1px solid #383939;
+    border-radius: 25px;
+    transition: 500ms;
+}
+
+.bold {
+    font-weight: 600;
+}
